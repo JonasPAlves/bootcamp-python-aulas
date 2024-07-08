@@ -1,23 +1,26 @@
-frutas = ["laranja", "maca", "uva"]
-print(frutas)
 
-frutas = []
-print(frutas)
 
-letras = list("python")
-print(letras)
 
-numeros = list(range(10))
-print(numeros)
+class Foo:
 
-carro = ["Ferrari", "F8", 4200000, 2020, 2900, "São Paulo", True]
+    def hello(self):
 
-print(carro)
-#ggg
+        print(self.__class__.__name__.lower())
 
-n =  [n**2 if n > 6 else n for n in range(10) if n % 2 == 0] 
-print (n)
 
-carros = ("gol")
 
-print(isinstance(carros, tuple))
+
+
+class Bar(Foo):
+
+    def hello(self):
+
+        return super().hello()
+
+
+
+
+
+bar = Bar()
+
+bar.hello()
